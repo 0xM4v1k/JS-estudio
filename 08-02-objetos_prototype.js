@@ -5,7 +5,7 @@ function Persona(nombre, apellido, email) {
   this.nombre = nombre;
   this.apellido = apellido;
   this.email = email;
-  // Se puede crear métodos o funciones dentro de un constructor
+  // Se puede crear métodos o funciones dentro de una funcion constructor de objetos
   this.nombrecompleto = function () {
     return nombre + " " + apellido;
   };
