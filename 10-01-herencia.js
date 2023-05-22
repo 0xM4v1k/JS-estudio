@@ -1,4 +1,3 @@
-
 class Persona{
   constructor(nombre, apellido) {
     this._nombre = nombre;
@@ -23,6 +22,13 @@ class Persona{
 
   nombreCompleto() {
     return this._nombre + ' ' + this._apellido;
+  }
+
+  // Sobrescribiendo el método de la clase Padre (Object)
+  toString() {
+    // Se aplica poliformismo (multiples formas en tiempo de ejecución)
+    // El método que se ejecuta depende si es una referencia de tipo padre o de tipo hijo
+    return this.nombreCompleto();
   }
 }
 
@@ -62,4 +68,7 @@ console.log(empleado1.nombre);
 
 // Heredar métodos
 
-console.log(empleado1.nombreCompleto())
+console.log(empleado1.nombreCompleto());
+
+// Sobre escribir el metodo toString en la clase padre para poder visualizar la información en un navegador
+console.log(empleado1.toString())
