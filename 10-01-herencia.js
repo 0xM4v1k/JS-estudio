@@ -39,6 +39,17 @@ class Empleado extends Persona{
   set departamento(departamento) {
     this._departamento = departamento;
   }
+  // Sobrescritura: Modificar el comportamiento de un método definido de la clase padre
+  // Una forma de sobrescritura
+  /*
+  nombreCompleto() {
+    return this._nombre + ' ' + this._apellido + ', ' + this._departamento;
+  }
+  */
+  // Otra forma de sobrescritura
+  nombreCompleto() {
+    return super.nombreCompleto() + ', ' + this.departamento;
+  }
 }
 
 let persona1 = new Persona('Lauro', 'Spike');
